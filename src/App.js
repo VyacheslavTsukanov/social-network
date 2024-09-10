@@ -1,25 +1,32 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Categories from './components/Categories';
+import People from './components/People';
+import PostForm from './components/PostForm';
+import PostList from './components/PostList';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    const [posts, setPosts] = useState([]);
+
+    const addPost = (content) => {
+        setPosts([...posts, content]);
+    };
+
+    return (
+        <div className="app">
+            <div className="sidebar">
+                <Categories />
+            </div>
+            <div className="main-content">
+                <h1>Посты</h1>
+                <PostForm addPost={addPost} />
+                <PostList posts={posts} />
+            </div>
+            <div className="people-list">
+                <People />
+            </div>
+        </div>
+    );
+};
 
 export default App;

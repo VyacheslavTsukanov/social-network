@@ -1,0 +1,41 @@
+/* People */
+h2 {
+    font-size: 24px;
+    color: white; /* Изменен цвет заголовка на белый */
+}
+
+
+.person:hover {
+    background-color: #e0e0e0; /* Можно оставить этот цвет, если хотите, чтобы текст был виден */
+    cursor: pointer;
+}
+
+.person:hover {
+    background-color: #e6f7ff;
+}
+
+.person {
+    display: flex; /* Используем flexbox для выравнивания изображения и текста */
+    align-items: center; /* Выравнивание по центру по вертикали */
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.person-image {
+    width: 40px; /* Ширина изображения */
+    height: 40px; /* Высота изображения */
+    border-radius: 50%; /* Круглая форма изображения */
+    margin-right: 10px; /* Отступ справа от изображения */
+}
+
+.search-input {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
