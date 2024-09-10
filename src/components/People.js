@@ -5,9 +5,9 @@ const People = () => {
     const [searchTerm, setSearchTerm] = useState('');
 
    const people = [
-        { id: 1, name: 'Alice', image: 'https://example.com/alice.jpg' },
-        { id: 2, name: 'Bob', image: 'https://example.com/bob.jpg' },
-        { id: 3, name: 'Charlie', image: 'https://example.com/charlie.jpg' },
+        { id: 1, name: 'Alice', image: '#' },
+        { id: 2, name: 'Bob', image: '#' },
+        { id: 3, name: 'Charlie', image: '#' },
     ];
 
     // Фильтруем людей по имени на основе поискового запроса
@@ -36,4 +36,3 @@ const People = () => {
 };
 
 export default People;
-

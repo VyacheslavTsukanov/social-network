@@ -32,7 +32,7 @@
 /* Пост */
 
 .main-content {
-    margin: 0 auto; /* Центрирование */
+    text-align: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень */
 }
 
@@ -76,6 +76,3 @@ button:hover {
     border: 1px solid #e1e1e1; /* Цвет рамки поста */
     border-radius: 4px; /* Скругление углов поста */
 }
-
-
-

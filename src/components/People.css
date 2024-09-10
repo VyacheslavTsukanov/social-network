@@ -6,12 +6,8 @@ h2 {
 
 
 .person:hover {
-    background-color: #e0e0e0; /* Можно оставить этот цвет, если хотите, чтобы текст был виден */
+    background-color: #b1bbd4;
     cursor: pointer;
-}
-
-.person:hover {
-    background-color: #e6f7ff;
 }
 
 .person {
@@ -19,10 +15,11 @@ h2 {
     align-items: center; /* Выравнивание по центру по вертикали */
     padding: 10px;
     margin: 5px 0;
-    background-color: #fff;
+    background-color: #5f6881;
     border: 1px solid #ddd;
     border-radius: 4px;
     transition: background-color 0.3s;
+    color: #fff;
 }
 
 .person-image {
