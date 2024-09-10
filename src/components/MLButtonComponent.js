@@ -36,7 +36,7 @@ const NeuralNetworkComponent = () => {
 
   return (
     <div className='ML'>
-      <h1>Нейронная сеть на React</h1>
+      <h2>Нейронная сеть на React</h2>
       <button className='MLButton' onClick={createAndTrainModel}>Создать и обучить модель</button>
       <div>
         <input

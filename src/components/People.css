@@ -4,7 +4,6 @@ h2 {
     color: white; /* Изменен цвет заголовка на белый */
 }
 
-
 .person:hover {
     background-color: #b1bbd4;
     cursor: pointer;
@@ -15,7 +14,6 @@ h2 {
     align-items: center; /* Выравнивание по центру по вертикали */
     padding: 10px;
     margin: 5px 0;
-    background-color: #5f6881;
     border: 1px solid #ddd;
     border-radius: 4px;
     transition: background-color 0.3s;

@@ -10,6 +10,8 @@ input[type="number"] {
     border-radius: 5px; /* Скругленные углы */
     font-size: 16px; /* Размер шрифта */
     transition: border-color 0.3s ease; /* Плавный переход цвета рамки */
+    /* background-color: #484f65;
+    color: #fff; */
   }
   
   input[type="number"]:focus {

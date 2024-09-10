@@ -3,7 +3,8 @@ import Categories from './components/Categories'; // Импортируем ко
 import PostForm from './components/PostForm'; // Импортируем компонент формы постов
 import PostList from './components/PostList'; // Импортируем компонент списка постов
 import People from './components/People'; // Импортируем компонент людей
-import MLButtonComponent from './components/MLButtonComponent';
+import MLButtonComponent from './components/MLButtonComponent'; // Импортируем компонент ML
+import Analytics from './components/Analytics'; // Импортируем компонент Аналитики
 import './App.css';
 
 const App = () => {
@@ -26,11 +27,15 @@ const App = () => {
                         <PostForm addPost={addPost} />
                         <PostList posts={posts} />
                     </>
-                  ) : (
+                ) : activeCategory === 'ml' ? (
                     <>
-                      <MLButtonComponent  />
+                        <MLButtonComponent />
                     </>
-                )}
+                ) : activeCategory === 'analytics' ? (
+                    <>
+                        <Analytics />
+                    </>
+                ) : null}
             </div>
             <div className="people-list">
                 <People />

@@ -6,9 +6,9 @@ const Categories = ({ setActiveCategory }) => {
         <div className="categories">
             <h2>Категории</h2>
             <ul>
-                {['posts', 'ml'].map((category, index) => (
+                {['posts', 'ml', 'analytics'].map((category, index) => (
                     <li key={index} onClick={() => setActiveCategory(category)}>
-                        {category === 'posts' ? 'Посты' : 'Интерфейс ML'}
+                        {category === 'posts' ? 'Посты' : category === 'ml' ? 'Интерфейс ML' : 'Аналитика'}
                     </li>
                 ))}
             </ul>
