@@ -17,7 +17,7 @@ const People = () => {
 
     return (
         <div className="people">
-            <h2>People</h2>
+            <h2>Люди рядом</h2>
             <input
                 type="text"
                 placeholder="Поиск..."
