@@ -5,7 +5,7 @@ import PostList from './components/PostList'; // Импортируем комп
 import People from './components/People'; // Импортируем компонент людей
 import MLButtonComponent from './components/MLButtonComponent'; // Импортируем компонент ML
 import Analytics from './components/Analytics'; // Импортируем компонент Аналитики
-import Dashboard from './components/Dashboard';
+import Dashboard from './components/Dashboard/Dashboard';
 import './App.css';
 
 const App = () => {
