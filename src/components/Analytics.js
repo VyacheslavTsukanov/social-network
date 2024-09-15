@@ -1,53 +1,29 @@
-// src/Analytics.js
-import React, { useState, useEffect } from 'react';
+// src/components/Dashboard.js
+import React from 'react';
+import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
+import { Bar } from 'react-chartjs-2';
+
+ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 const Analytics = () => {
-    const [events, setEvents] = useState([]);
 
-    useEffect(() => {
-        // Загружаем события из локального хранилища при монтировании компонента
-        const storedEvents = JSON.parse(localStorage.getItem('analyticsEvents')) || [];
-        setEvents(storedEvents);
-    }, []);
-
-    const logEvent = (event) => {
-        const newEvents = [...events, event];
-        setEvents(newEvents);
-        localStorage.setItem('analyticsEvents', JSON.stringify(newEvents));
+    const data = {
+        labels: ['Январь', 'Февраль', 'Март'],
+        datasets: [
+            {
+                label: 'Продажи',
+                data: [30, 20, 50],
+                backgroundColor: 'rgba(245, 255, 145, 0.8)',
+            },
+        ],
     };
 
     return (
         <div>
-            <h2>Аналитика событий</h2>
-            <button onClick={() => logEvent({ type: 'BUTTON_CLICK', timestamp: Date.now() })}>
-                Нажми меня
-            </button>
-            <h3>События:</h3>
-            <ul>
-                {events.map((event, index) => (
-                    <li key={index}>
-                        {event.type} - {new Date(event.timestamp).toLocaleString()}
-                    </li>
-                ))}
-            </ul>
+          <h2>График продаж</h2>
+            <Bar data={data} />
         </div>
     );
 };
 
 export default Analytics;
-
-/*
-
-    ▎Объяснение кода
-    1. Состояние и эффекты: Мы используем useState для хранения событий и useEffect для загрузки событий из локального хранилища при монтировании компонента.
-    2. Логирование событий: Функция logEvent добавляет новое событие в массив событий и сохраняет его в локальном хранилище.
-    3. Отображение событий: Мы отображаем список событий, которые были зафиксированы.
-
-    ▎Расширение функционала
-    Вы можете расширить функционал вашей аналитики, добавив:
-    - Отслеживание других типов событий (например, навигация по страницам).
-    - Фильтрацию и сортировку событий.
-    - Экспорт данных в CSV или другой формат.
-    - Интеграцию с сервером для хранения данных на бэкенде.
-
-*/
